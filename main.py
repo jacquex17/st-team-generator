@@ -44,12 +44,21 @@ if not_here:
 random.shuffle(players)
 make_teams = st.button('Make teams!')
 
-j_index = players.index('Julian')
-players.insert(0, players.pop(j_index))
-e_index = players.index('Eileen')
-players.insert(1, players.pop(e_index))
-s_index = players.index('Samantha')
-players.insert(2, players.pop(s_index))
+try:
+    j_index = players.index('Julian')
+    players.insert(0, players.pop(j_index))
+except:
+    pass
+try:
+    e_index = players.index('Eileen')
+    players.insert(1, players.pop(e_index))
+except:
+    pass
+try:
+    s_index = players.index('Samantha')
+    players.insert(2, players.pop(s_index))
+except:
+    pass
 
 def chunks(l, n):
     results = {}
